@@ -9,6 +9,7 @@
     "author": "Mikis Woodwinter",
     "license": "MIT",
     "dependencies": {
+        "express": "^4.17.1",
         "faker": "^4.1.0",
         "knex": "^0.19.0",
         "sqlite3": "^4.0.9"
