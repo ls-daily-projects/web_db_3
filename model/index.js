@@ -19,7 +19,11 @@ const getShoppingList = recipeId => {
         .where("recipe.id", recipeId)
 }
 
-const getInstructions = recipeId => {}
+const getInstructions = recipeId => {
+    return db("instruction")
+        .innerJoin("recipe", "instruction.recipe_id", "recipe.id")
+        .where("recipe.id", recipeId)
+}
 
 module.exports = {
     getRecipes,

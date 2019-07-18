@@ -1,6 +1,6 @@
 const express = require("express")
 
-const { getRecipes, getShoppingList } = require("./model")
+const { getRecipes, getShoppingList, getInstructions } = require("./model")
 
 const PORT = process.env.PORT || 5000
 const app = express()
@@ -19,6 +19,15 @@ app.get("/api/recipes", async (_req, res, next) => {
 app.get("/api/recipes/:recipeId", async (req, res, next) => {
     try {
         const recipe = await getShoppingList(req.params.recipeId)
+        res.json(recipe)
+    } catch (error) {
+        next(error)
+    }
+})
+
+app.get("/api/recipes/:recipeId/instructions", async (req, res, next) => {
+    try {
+        const recipe = await getInstructions(req.params.recipeId)
         res.json(recipe)
     } catch (error) {
         next(error)
