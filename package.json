@@ -2,11 +2,18 @@
     "name": "37_web_db_3_challenge",
     "version": "0.1.0",
     "main": "index.js",
+    "scripts": {
+        "start": "nodemon ."
+    },
     "repository": "git@github.com:Miikis/webdb-iii-challenge.git",
     "author": "Mikis Woodwinter",
     "license": "MIT",
     "dependencies": {
+        "faker": "^4.1.0",
         "knex": "^0.19.0",
         "sqlite3": "^4.0.9"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1"
     }
 }
