@@ -62,3 +62,7 @@ typings/
 
 # Mac Cruft
 .DS_Store
+
+# DB files
+*.sqlite3
+*.db3
